@@ -12,13 +12,15 @@ a {
 .wrapper {
   position: relative;
   top: 0;
-  left: 0;
+  left: 250px;
   height: 100vh;
-  margin-left: 250px;
+  width: calc(100% - 250px);
+  transition: .3s;
 }
 
 .wrapper.collapse {
-  margin-left: 0;
+  width: 100%;
+  left: 0;
 }
 
 header {
@@ -372,6 +374,7 @@ nav {
   font-weight: 600;
   overflow-x: hidden;
   z-index: 10;
+  transition: .3s;
 }
 
 nav.collapse {
@@ -492,7 +495,8 @@ nav.collapse {
 
 @media screen and (max-width: 600px) {
   .wrapper {
-    margin-left: 0;
+    left: 0;
+    width: 100%;
   }
   nav {
     transform: translateX(-250px);
